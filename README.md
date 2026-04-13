@@ -1,57 +1,102 @@
 # Exam Management System (EMS)
 
-A secure, lightweight, and user-friendly **Exam Management System** built for **Mustard Seed International Schools**.
+A secure, lightweight, and user-friendly **Examination Management System** built specifically for **Mustard Seed International Schools**.
 
-### "Rise and Shine"
-
-## Features
-
-### 👨‍🎓 Student Side (No Login Required)
-- Search by student name
-- View available exams filtered by class (YEAR 1 – YEAR 8 + General)
-- Clean exam interface with sticky header
-- Real-time timer with auto-submit
-- Instant auto-grading and results
-
-### 👨‍💼 Admin Side (Login Required)
-- Manage students
-- Create exams and class-specific questions
-- View results and analytics
-
-## Tech Stack
-- **PHP 8+** with PDO (Prepared Statements)
-- **MySQL** Database
-- **Bootstrap 5** + Font Awesome
-- MVVM-inspired architecture
-- Separate HTML / CSS / JS files
-- Strong security (CSRF, Session protection, One attempt per exam)
-
-## Project Structure
-
-School/
-├── public/              # Student accessible files
-├── private/Core/        # Core files (Config, Database, App)
-├── assets/css/          # Separate CSS files
-├── assets/js/           # Separate JS files
-├── .htaccess
-├── README.md
-└── quiz_system.sql      # Database structure
-
-
-## Setup Instructions
-1. Import `quiz_system.sql` into your MySQL database
-2. Update database credentials in `private/Core/Config.php`
-3. Place the project in `htdocs/School`
-4. Access via `http://localhost/School/public/`
-
-## School Branding
-- **School Name**: Mustard Seed International Schools
-- **Motto**: Rise and Shine
-- **Primary Color**: `#198754` (Green)
+> **"Rise and Shine"**
 
 ---
 
-**Made with ❤️ for Mustard Seed International Schools**
+## ✨ Features
 
-# Exam-Management-System
-Exam Management System for Mustard Seed International Schools
+### 👨‍🎓 Student Experience (No Login Required)
+- Simple name-based search to find and access student profile
+- Personalized dashboard showing available exams by class
+- Modern exam interface with **sticky header**
+- Real-time countdown timer with automatic submission
+- Instant auto-grading and result display with clear feedback
+
+### 👨‍💼 Admin Features (Login Protected)
+- Manage students and classes
+- Create and manage exams
+- Add class-specific questions
+- View and monitor student results
+
+---
+
+## 🎨 Design Highlights
+
+- **Sticky Exam Header** displaying:
+  - Subject • Student Name • Class • Time Remaining • Questions Answered
+- Clean, numbered question cards with smooth hover effects
+- Professional radio button styling with green selection
+- Consistent green theme (`#198754`) matching school branding
+- Fully responsive design (works well on mobile and desktop)
+- Simple, uncluttered, and school-appropriate UI
+
+---
+
+## 🛠 Technology Stack
+
+- **PHP 8+** with PDO Prepared Statements
+- **MySQL** Database
+- **Bootstrap 5** + Font Awesome 6
+- MVVM-inspired architecture
+- Strong separation between public and private code
+- Separate HTML, CSS, and JavaScript files
+
+---
+
+## 📁 Project Structure
+
+```bash
+School/
+├── public/                    # Only accessible folder for students
+│   ├── index.php              # Homepage - Student Search
+│   ├── student.php            # Student Dashboard
+│   ├── exam.php               # Exam Taking Page
+│   └── assets/
+│       ├── css/               # CSS files
+│       └── js/                # JavaScript files
+├── private/
+│   └── Core/                  # Core system files
+│       ├── App.php            # Autoloader & core functions
+│       ├── Config.php
+│       └── Database.php
+├── quiz_system.sql            # Database schema
+├── README.md
+└── .htaccess
+```
+---
+
+## Quick Setup
+
+1. Import `quiz_system.sql` into your MySQL database
+2. Update database credentials in `private/Core/Config.php`
+3. Place the project in `htdocs/School`
+4. Access the system at: `http://localhost/School/public/`
+
+---
+
+## Supported Classes
+
+- YEAR 1 to YEAR 8
+- General (questions available to all students)
+
+---
+
+## Features
+
+- Student search-based access (no login)
+- Class-based questions
+- Sticky exam header with timer, name, class and answered count
+- Auto grading and instant results
+- Bootstrap 5 + green theme
+
+---
+
+**Developed for Mustard Seed International Schools**
+
+**"Rise and Shine"**
+
+*Secure • Simple • Professional*
+
